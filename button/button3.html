@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>button3</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.all{
+			position:  relative;
+			left: 500px;
+		    top: 100px;
+			width: 200px;
+			height: 200px;
+			overflow: hidden;
+			/*background-color: #FFFF66;*/
+		}
+		.circle{
+			/*position: absolute;*/
+			width: 200px;
+			height: 200px;
+			background-color: #FF6666;
+			border-radius: 50%;
+		}
+		span{
+			position: absolute;
+			display: block;
+			width: 60px;
+			margin:3px;
+			border-radius: 20px;
+			height: 10px;
+			background-color: #FFCC99;
+		}
+		.one_l{
+			transition: all 1s;
+			left: 53px;
+			top: 94px;
+			transform: rotate(90deg);
+		}
+		.two_l{
+			transition: all 1s;
+			left: 75px;
+			top: 80px;
+			transform: rotate(30deg);
+		}
+		.three_l{
+			transition: all 1s;
+			left: 75px;
+			top: 106px;
+			transform: rotate(-30deg);
+		}
+		
+
+		.one_a{
+			transition: all 1s;
+			left: 53px;
+			top: 220px;
+			transform: rotate(360deg);
+		}
+		.two_a{
+			transition: all 1s;
+			left: 50px;
+			top: 95px;
+			transform: rotate(270deg);
+		}
+		.three_a{
+			transition: all 1s;
+			left: 85px;
+			top: 95px;
+			transform: rotate(-270deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="all"  >
+		<div class="circle" >
+			<span class="one_l"></span>
+			<span class="two_l"></span>
+			<span class="three_l"></span>
+		</div>
+	</div>
+<script type="text/javascript">
+	window.onload=function(){
+		let circle = document.getElementsByClassName("circle")[0];
+		let span = document.getElementsByTagName('span');
+		circle.value = true;
+
+		circle.onclick =function(){
+			circle.value = !circle.value;
+			if(circle.value){
+				    circle.style.backgroundColor = "#FF9966";
+					span[0].className = 'one_a'; 
+					span[1].className = 'two_a'; 
+					span[2].className = 'three_a'; 
+			}else{
+				    circle.style.backgroundColor="#FF6666";
+					span[0].className = 'one_l'; 
+					span[1].className = 'two_l'; 
+					span[2].className = 'three_l';
+			}
+		}
+	}
+</script>
+</body>
+</html>

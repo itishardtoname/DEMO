@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #7AA2FF;
+		}
+		div{
+			position: relative;
+			left : 100px;
+			top : 100px;
+			height: 80px;
+			width: 250px;
+			background-color: #000033;
+			color: white;
+			font-size: 30px;
+			font-weight: 600;
+			line-height: 80px;
+			text-align: center;
+		}
+		div:hover{
+			background-color: #941E00;
+		}
+		ul{
+			position: relative;
+			height: 80px;
+			width: 250px;
+			left: 100px;
+			top: 20px;  /*为啥是20？？？ */
+			list-style: none;
+			/*overflow: hidden;*/
+		}
+		li{
+			background-color: white;
+		}
+		li:nth-child(1){
+			width: 250px;
+			height: 3px;
+			position: absolute;
+			left: -250px;
+			top: 0;
+			transition: left 0.9s;
+		}
+		ul:hover li:nth-child(1){
+			left: 250px;
+		}
+		li:nth-child(2){
+			width: 3px;
+			height: 80px;
+			position: absolute;
+			left: 247px;
+			top: -80px;
+			transition: top 1s;
+			transition-delay: 0.25s;
+
+		}
+		ul:hover li:nth-child(2){
+			top: 80px;
+		}
+		li:nth-child(3){
+			width: 250px;
+			height: 3px;
+			position: absolute;
+			left: 250px;
+			top: 77px;
+			transition: left 0.9s;
+
+		}
+		ul:hover li:nth-child(3){
+			left: -250px;
+		}
+		li:nth-child(4){
+			width: 3px;
+			height: 80px;
+			position: absolute;
+			left: 0;
+			top: 80px;
+			transition: top 1s;
+			transition-delay: 0.25s;
+
+		}
+		ul:hover li:nth-child(4){
+			top: -80px;
+		}
+	</style>
+</head>
+<body>
+<div>悬浮</div>
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+</body>
+</html>

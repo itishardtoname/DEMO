@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search-3</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		background-color: #7BA7AB;
+		height: 40px;
+		padding: 30px;
+	}
+	form{
+		float:right;
+
+	}
+	
+	input{
+		height: 40px;
+		width: 250px;
+		border-radius: 30px;
+		text-indent: 1em;
+		outline: none;
+		border:2px solid black;
+
+		transition: all 2s;
+	}
+	input:focus{
+		width: 300px;
+		font-weight: bold;
+	}
+	button{
+		position: absolute;
+		left: 623px;
+		top: 32px;
+		height: 40px;
+		width:40px;
+		background-color: rgba(0,0,0,0);
+		border:none;
+	}
+	button:before{
+		content:'\f002';
+		font-family: FontAwesome;
+	}
+
+</style>
+</head>
+<body>
+	<div class="search d7">
+		<form>
+			<input type="text" placeholder="搜索从这里开始...">
+			<button type="submit"></button>
+		</form>
+	</div>
+</body>
+</html>
